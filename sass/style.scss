@@ -12,20 +12,19 @@ body {
 
 // HEADER + NAV SECTION
 
-.main-header {
+.header {
     background-image: url(../images/main_header_bcg_image.png);
     height: 100vh;
     width: auto;
     background-position: top 55% left 50% ;
-    // background-size: 100%;
     background-repeat: no-repeat;
     
-    .main-nav {
+    .nav {
         display: flex;
         justify-content: center;
         
         &__items {
-            display: flex; /* flex-direction is row by default*/
+            display: flex;
             justify-content: center; 
             align-items: center;
             width: 80%;
@@ -34,60 +33,62 @@ body {
             padding: 0;
             margin-top: 3%;
             list-style-type: none;
+
+            &-item {
+                margin: 0 4%;
+            }
+    
+            &-logo {
+                padding: 0 1rem;
+            }
+    
+            &-link {
+                text-decoration: none;
+                color: #4d4959;
+                font-weight: 700;
+                
+                &:hover {
+                    color:rgb(92, 196, 175);
+                    transition: .4s;
+                }
+            }
         }
         
-        &__item {
-            margin: 0 4%;
-        }
+        
+    }
+}
 
-        &__logo {
-            padding: 0 1rem;
-        }
+// ***************************************** VINTAGE BIKE 
 
-        &__link {
-            text-decoration: none;
-            color: #4d4959;
-            font-weight: 700;
-            &:hover {
-                color:rgb(92, 196, 175);
-                transition: .4s;
-            }
+.vintageBike {
+  background-color: #f7f7f7;
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6rem 0;
+        font-size: .8rem;
+
+        &-title {
+            font-size: 1.1rem;
+            margin: 1.5rem 0;
+            letter-spacing: .3rem;
+        }
+        
+        &-paragraph {
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+            color: #848789; 
+            text-align: center;
         }
     }
 }
 
-// ***************************************** FIRST MODEL 
-
-.first-model {
-  background-color: #f7f7f7;
-
-  &__description {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 6rem 0;
-      font-size: .8rem;
-  }
-
-  &__title {
-    font-size: 1.1rem;
-    margin: 1.5rem 0;
-    letter-spacing: .3rem;
-  }
-  &__paragraph {
-    font-size: 0.9rem;
-    line-height: 1.5rem;
-    color: #848789; 
-    text-align: center;
-    
-  }
-}
-
 // ***************************************** SECOND MODEL 
 
-.second-model {
-   display: flex;
-   flex-wrap: wrap;
+.vintageOliva {
+    display: flex;
 
     &__big-image-container {
         display: flex;
@@ -95,19 +96,19 @@ body {
         justify-content: center;
         width: 68%;
         height: 50%;
-    }
 
-    &__big-image {
-       width: 100%;
-       height: 100%;
-       background-color: #282f35;
-    }
-
-    &__center-logo {
-        position: absolute;
-        bottom: 35%;
-        width: 15%;
-        height: 25%;
+        &-big-image {
+            width: 100%;
+            height: 100%;
+            background-color: #282f35;
+        }
+     
+        &-center-logo {
+            position: absolute;
+            bottom: 35%;
+            width: 15%;
+            height: 25%;
+        }
     }
 
     &__description {
@@ -116,199 +117,207 @@ body {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-    }
 
-    &__text {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding-top: 1rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        position: relative;
-    }
-
-    &__title {
-        font-size: 1rem;
-        letter-spacing: .3rem;
-        padding: 1.5rem;
-    }
-
-    &__logo {
-        padding-top: 1.5rem;
-    }
-
-    &__paragraph {
-        font-size: 0.7rem;
-        color: #848789;
-        text-align: justify;
-        line-height: 1.4rem;
-        max-width: 100%;
-        padding-bottom: 2rem;
-        letter-spacing: 0.3px;
-    }
+        &-text {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 1rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            position: relative;
+        }
     
-    &__horizontal-line {
-        width: 15%;
-        height: 0.1rem;
-        background:#b5babd;
-        display: block;
-        margin: 0.6rem 0;
+        &-title {
+            font-size: 1rem;
+            letter-spacing: .3rem;
+            padding: 1.5rem;
+        }
+    
+        &-logo {
+            padding-top: 1.5rem;
+        }
+    
+        &-paragraph {
+            font-size: 0.7rem;
+            color: #848789;
+            text-align: justify;
+            line-height: 1.4rem;
+            max-width: 100%;
+            padding-bottom: 2rem;
+            letter-spacing: 0.3px;
+        }
+        
+        &-horizontal-line {
+            width: 15%;
+            height: 0.1rem;
+            background:#b5babd;
+            display: block;
+            margin: 0.6rem 0;
+        }
+    
+        &-arrow-box {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            position: relative;
+            top: 5px;
+            transform: rotate(45deg);
+        }
     }
 
-    &__arrow-box {
-        width: 30px;
-        height: 30px;
-        background-color: white;
-        position: relative;
-        top: 5px;
-        transform: rotate(45deg);
-    }
+    
 
     &__small-image-container {
         display: flex;
+
+        &-small-image {
+            width: 100%;
+            height: 100%;
+            background-color: #282f35;
+        }
     }
 
-    &__small-image {
-        width: 100%;
-        height: 100%;
-        background-color: #282f35;
-    }
+    
 }
 
-// ***************************************** THIRD MODEL
+// ***************************************** LA BORIOSA
 
 
-.third-model {
+.laBoriosa {
     display: flex;
 
     &__description {
-        @extend .second-model__description;
-    }
+        @extend .vintageOliva__description;
 
-    &__text {
-        @extend .second-model__text;
-    }
-
-    &__logo {
-        @extend .second-model__logo;
-    }
-
-    &__title {
-        @extend .second-model__title;
-    }
-
-    &__paragraph {
-        @extend .second-model__paragraph;
-    }
-
-    &__horizontal-line {
-        @extend .second-model__horizontal-line;
-    }
-
-    &__arrow-box {
-        @extend .second-model__arrow-box;
+        &-text {
+            @extend .vintageOliva__description-text;
+        }
+    
+        &-logo {
+            @extend .vintageOliva__description-logo;
+        }
+    
+        &-title {
+            @extend .vintageOliva__description-title;
+        }
+    
+        &-paragraph {
+            @extend .vintageOliva__description-paragraph;
+        }
+    
+        &-horizontal-line {
+            @extend .vintageOliva__description-horizontal-line;
+        }
+    
+        &-arrow-box {
+            @extend .vintageOliva__description-arrow-box;
+        }
     }
 
     &__small-image-container {
-        @extend .second-model__small-image-container;
-    }
+        @extend .vintageOliva__small-image-container;
 
-    &__small-image {
-        @extend .second-model__small-image;
-        background-color: #282f35;
-        
+        &-small-image {
+            @extend .vintageOliva__small-image-container-small-image;
+            background-color: #282f35;
+        }
     }
-
+    
     &__big-image-container {
-        @extend .second-model__big-image-container;
+        @extend .vintageOliva__big-image-container;
+        
+        &-big-image {
+            @extend .vintageOliva__big-image-container-big-image;
+            background-color: #282f35;
+        }
+    
+        &-center-logo {
+            @extend .vintageOliva__big-image-container-center-logo;
+        }
     }
 
-    &__big-image {
-        @extend .second-model__big-image;
-        background-color: #282f35;
-    }
-
-    &__center-logo {
-        @extend .second-model__center-logo;
-    }
+    
 }
 
 // ************************************ FOURTH MODEL 
 
-.fourth-model {
+.mHulot {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 
     &__left-image-container {
-        @extend .second-model__big-image-container;
+        @extend .vintageOliva__big-image-container;
         width: 33%;
-    }
 
-    &__left-image {
-        @extend .second-model__big-image;
-        width: 100%
-    }
-
-    &__center-logo {
-        position: absolute;
-        bottom: 35%;
-
+        &-left-image {
+            @extend .vintageOliva__big-image-container-big-image;
+            width: 100%
+        }
+    
+        &-center-logo {
+            position: absolute;
+            bottom: 35%;
+    
+        }
     }
 
     &__description {    
-        @extend .second-model__description; 
+        @extend .vintageOliva__description; 
         width: 34%;
-    }
-
-    &__text {
-        @extend .second-model__text;
-    }
-
-    &__logo {
-        @extend .second-model__logo;
-    }
-
-    &__title {
-        @extend .second-model__title;
-    }
-
-    &__paragraph {
-        @extend .second-model__paragraph;
-        padding-bottom: 0;
-    }
-
-    &__horizontal-line {
-        @extend .second-model__horizontal-line;
-    }
-
-    &__arrow-box {
-        @extend .second-model__arrow-box;
+       
+        &-text {
+            @extend .vintageOliva__description-text;
+        }
+    
+        &-logo {
+            @extend .vintageOliva__description-logo;
+        }
+    
+        &-title {
+            @extend .vintageOliva__description-title;
+        }
+    
+        &-paragraph {
+            @extend .vintageOliva__description-paragraph;
+            padding-bottom: 0;
+        }
+    
+        &-horizontal-line {
+            @extend .vintageOliva__description-horizontal-line;
+        }
+    
+        &-arrow-box {
+            @extend .vintageOliva__description-arrow-box;
+        }
     }
 
     &__small-image-container {
         display: flex;
-    }
 
-    &__small-image {
-        @extend .second-model__small-image;
-        width: 100%;
+        &-small-image {
+            @extend .vintageOliva__small-image-container-small-image;
+            width: 100%;
+        }
     }
 
     &__right-image-container {
-        @extend .second-model__big-image-container;
+        @extend .vintageOliva__big-image-container;
         width: 33%;
+
+        &-right-image {
+            @extend .vintageOliva__big-image-container-big-image;
+            width: 100.2%;
+        }
     }
 
-    &__right-image {
-        @extend .second-model__big-image;
-        width: 100.2%;
-    }
+    
 }
 
 // ***************************** TWEETER CAROUSEL 
 
-.tweeter-carousel {
+.tweeterCarousel {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -316,54 +325,49 @@ body {
  
     &__slide {
         display: none;
-    }
 
-    &__tweet {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 5rem 0;
-        font-size: .8rem;
-    }
-
-    &__tweet-title {
-        font-size: 1.1rem;
-        padding: 2rem 0;
-        letter-spacing: 1px;
-    }
-
-    &__tweet-time {
-        color: #848789;
-        font-weight: 300;
-    }
-
-    &__tweet-text {
-        font-size: 1.2rem;
-        font-weight: 300;
-        font-style: italic;
-        text-align: center;
-        color: grey;
-        width: 75%;
+        &-tweet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5rem 0;
+            font-size: .8rem;
+    
+            &-title {
+                font-size: 1.1rem;
+                padding: 2rem 0;
+                letter-spacing: 1px;
+            }
+        
+            &-text {
+                font-size: 1.2rem;
+                font-weight: 300;
+                font-style: italic;
+                text-align: center;
+                color: grey;
+                width: 75%;
+            }
+        }
     }
 
     &__dots {
         text-align: center;
         padding-bottom: 3rem;
-    }
 
-    &__dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: white;
-        border: .5px solid rgb(223, 220, 220);
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-
-        &:hover {
-            background-color: #a9afb3;
+        &-dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: white;
+            border: .5px solid rgb(223, 220, 220);
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+    
+            &:hover {
+                background-color: #a9afb3;
+            }
         }
     }
 
@@ -389,7 +393,7 @@ body {
     }
 } 
   
-// ******************************* BIKE IMAGES
+// ******************************* BIKE IMAGES SHOP
 
 .bike-images {
     display: flex;
@@ -401,8 +405,9 @@ body {
         background-color: #FCFFFF;
         position: relative;
 
-        &-top {
+        &-top-images {
             display: flex;
+            height: 50%;
         }
     }
    
@@ -427,6 +432,7 @@ body {
         width: 100%;
         height: 100%;
         transition: .5s;
+        -webkit-backface-visibility: hidden;
     }
 
     &__image-1-hover {
@@ -435,6 +441,7 @@ body {
         position: absolute;
         bottom: 0%;
         display: none;
+        
 
         &-paragraph {
             color: white;
@@ -447,84 +454,228 @@ body {
 
     &__image-2-container {
         width: 50%;
+        height: 100%;
+        position: relative;
+        background-color: #499175;
+
+        &:hover .bike-images__image-2 {
+            opacity: 0.3;
+        }
+
+        &:hover .bike-images__image-2-hover {
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            flex-direction: column;
+        }
     }
 
     &__image-2 {
-        width: 100%;
-        height: 100%;
-        transition: .5s;
+        @extend .bike-images__image-1;
     }
 
-    &__image-3-container {
+    &__image-2-hover {
+        @extend .bike-images__image-1-hover;
+
+        &-paragraph {
+            @extend .bike-images__image-1-hover-paragraph;
+        }
+    }
+
+    &__image-3-container-bottom-left {
         width: 100%;
+        height: 50%;
+        position: relative;
+        background-color: #499175;
+
+        &:hover .bike-images__image-3 {
+            opacity: 0.3;
+        }
+
+        &:hover .bike-images__image-3-hover {
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            flex-direction: column;
+        }
     }
 
     &__image-3 {
-        width: 100%;
-        height: 51.2%;
-        position: absolute;
-        background-color: black;
+        @extend .bike-images__image-1;
+    }
+
+    &__image-3-hover {
+        @extend .bike-images__image-1-hover;
+
+        &-paragraph {
+            @extend .bike-images__image-1-hover-paragraph;
+        }
     }
 
     &__container-middle {
         display: flex;
-        width:33%
+        width: 33%
     }
 
-    &__image-4-container-middle {
+    &__image-4-container {
         width: 50%;
+        background-color: #499175;
+        position: relative;
+
+        &:hover .bike-images__image-4 {
+            opacity: 0.3;
+        }
+
+        &:hover .bike-images__image-4-hover {
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            flex-direction: column;
+        }
     }
 
     &__image-4 {
-        width: 100%;
-        height: 100%;
+        @extend .bike-images__image-1;
     }
 
-    &__image-5-container-middle {
+    &__image-4-hover {
+        @extend .bike-images__image-1-hover;
+
+        &-paragraph {
+            @extend .bike-images__image-1-hover-paragraph;
+        }
+    }
+
+    &__image-5-container {
         width: 50%;
+        background-color: #499175;
+        position: relative;
+
+        &:hover .bike-images__image-5 {
+            opacity: 0.3;
+        }
+
+        &:hover .bike-images__image-5-hover {
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            flex-direction: column;
+        }
     }
 
     &__image-5 {
-        width: 100%;
-        height: 100%;
+        @extend .bike-images__image-1;
+    }
+
+    &__image-5-hover {
+        @extend .bike-images__image-1-hover;
+
+        &-paragraph {
+            @extend .bike-images__image-1-hover-paragraph;
+        }
     }
 
     &__container-right {
         display: flex;
         width: 34%;
         flex-direction: column;
+        align-items: center;
     }    
 
-    &__image-6-container-right {
+    &__image-6-container {
         width: 100%;
+        background-color: #499175;
+        position: relative;
         display: flex;
+
+        &:hover .bike-images__image-6 {
+            opacity: 0.3;
+        }
+
+        &:hover .bike-images__image-6-hover {
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            flex-direction: column;
+        }
     }
 
     &__image-6 {
-        width: 100%;
-        height: 100%;
+        @extend .bike-images__image-1;
+    }
+
+    &__image-6-hover {
+        @extend .bike-images__image-1-hover;
+
+        &-paragraph {
+            @extend .bike-images__image-1-hover-paragraph;
+        }
     }
 
     &__container-right-bottom {
         display: flex;
     }
 
-    &__image-7-container-right {
+    &__image-7-container {
         width: 50%;
+        height: 50%;
+        background-color: #499175;
+        position: relative;
+        display: flex;
+
+        &:hover .bike-images__image-7 {
+            opacity: 0.3;
+        }
+
+        &:hover .bike-images__image-7-hover {
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            flex-direction: column;
+        }
     }
 
     &__image-7 {
-        width: 100%;
-        height: 100%;
+        @extend .bike-images__image-1;
     }
 
-    &__image-8-container-right {
+    &__image-7-hover {
+        @extend .bike-images__image-1-hover;
+
+        &-paragraph {
+            @extend .bike-images__image-1-hover-paragraph;
+        }
+    }
+
+    &__image-8-container {
         width: 50%;
+        height: 50%;
+        background-color: #499175;
+        position: relative;
+        display: flex;
+
+        &:hover .bike-images__image-8 {
+            opacity: 0.3;
+        }
+
+        &:hover .bike-images__image-8-hover {
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            flex-direction: column;
+        }
     }
 
     &__image-8 {
-        width: 100%;
-        height: 100%;
+        @extend .bike-images__image-1;
+    }
+
+    &__image-8-hover {
+        @extend .bike-images__image-1-hover;
+
+        &-paragraph {
+            @extend .bike-images__image-1-hover-paragraph;
+        }
     }
 }
 

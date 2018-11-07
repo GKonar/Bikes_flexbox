@@ -6,8 +6,8 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-    var slides = document.getElementsByClassName("tweeter-carousel__slide");
-    var dots = document.getElementsByClassName("tweeter-carousel__dot");
+    var slides = document.getElementsByClassName("tweeterCarousel__slide");
+    var dots = document.getElementsByClassName("tweeterCarousel__dots-dot");
   
         if (n > slides.length) {
             slideIndex = 1;
