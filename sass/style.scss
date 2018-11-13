@@ -395,7 +395,7 @@ body {
   
 // ******************************* BIKE IMAGES SHOP
 
-.bike-images {
+.bikesImages {
     display: flex;
 
     &__container-left {
@@ -414,17 +414,21 @@ body {
     &__image-1-container {
         width: 50%;
         position: relative;
-        background-color: #499175;
+        background-color: white;
 
-        &:hover .bike-images__image-1 {
+        &:hover .bikesImages__image-1 {
             opacity: 0.3;
         }
 
-        &:hover .bike-images__image-1-hover {
+        &:hover .bikesImages__image-1-hover {
             display: flex;
             justify-content: center;
             align-items: center;    
             flex-direction: column;
+        }
+
+        &:hover {
+            background-color: #499175;
         }
     }
 
@@ -432,7 +436,10 @@ body {
         width: 100%;
         height: 100%;
         transition: .5s;
+        position: relative;
         -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0);
+        transform: translateZ(0);
     }
 
     &__image-1-hover {
@@ -456,29 +463,33 @@ body {
         width: 50%;
         height: 100%;
         position: relative;
-        background-color: #499175;
+        background-color: #fff;
 
-        &:hover .bike-images__image-2 {
+        &:hover .bikesImages__image-2 {
             opacity: 0.3;
         }
 
-        &:hover .bike-images__image-2-hover {
+        &:hover .bikesImages__image-2-hover {
             display: flex;
             justify-content: center;
             align-items: center;    
             flex-direction: column;
         }
+
+        &:hover {
+            background-color: #499175;
+        }
     }
 
     &__image-2 {
-        @extend .bike-images__image-1;
+        @extend .bikesImages__image-1;
     }
 
     &__image-2-hover {
-        @extend .bike-images__image-1-hover;
+        @extend .bikesImages__image-1-hover;
 
         &-paragraph {
-            @extend .bike-images__image-1-hover-paragraph;
+            @extend .bikesImages__image-1-hover-paragraph;
         }
     }
 
@@ -486,29 +497,33 @@ body {
         width: 100%;
         height: 50%;
         position: relative;
-        background-color: #499175;
+        background-color: #fff;
 
-        &:hover .bike-images__image-3 {
+        &:hover .bikesImages__image-3 {
             opacity: 0.3;
         }
 
-        &:hover .bike-images__image-3-hover {
+        &:hover .bikesImages__image-3-hover {
             display: flex;
             justify-content: center;
             align-items: center;    
             flex-direction: column;
         }
+
+        &:hover {
+            background-color: #499175;
+        }
     }
 
     &__image-3 {
-        @extend .bike-images__image-1;
+        @extend .bikesImages__image-1;
     }
 
     &__image-3-hover {
-        @extend .bike-images__image-1-hover;
+        @extend .bikesImages__image-1-hover;
 
         &-paragraph {
-            @extend .bike-images__image-1-hover-paragraph;
+            @extend .bikesImages__image-1-hover-paragraph;
         }
     }
 
@@ -519,59 +534,67 @@ body {
 
     &__image-4-container {
         width: 50%;
-        background-color: #499175;
+        background-color: #fff;
         position: relative;
 
-        &:hover .bike-images__image-4 {
+        &:hover .bikesImages__image-4 {
             opacity: 0.3;
         }
 
-        &:hover .bike-images__image-4-hover {
+        &:hover .bikesImages__image-4-hover {
             display: flex;
             justify-content: center;
             align-items: center;    
             flex-direction: column;
         }
+
+        &:hover {
+            background-color: #499175;
+        }
     }
 
     &__image-4 {
-        @extend .bike-images__image-1;
+        @extend .bikesImages__image-1;
     }
 
     &__image-4-hover {
-        @extend .bike-images__image-1-hover;
+        @extend .bikesImages__image-1-hover;
 
         &-paragraph {
-            @extend .bike-images__image-1-hover-paragraph;
+            @extend .bikesImages__image-1-hover-paragraph;
         }
     }
 
     &__image-5-container {
         width: 50%;
-        background-color: #499175;
+        background-color: #fff;
         position: relative;
 
-        &:hover .bike-images__image-5 {
+        &:hover .bikesImages__image-5 {
             opacity: 0.3;
         }
 
-        &:hover .bike-images__image-5-hover {
+        &:hover .bikesImages__image-5-hover {
             display: flex;
             justify-content: center;
             align-items: center;    
             flex-direction: column;
         }
+
+        &:hover {
+            background-color: #499175;
+        }
     }
 
     &__image-5 {
-        @extend .bike-images__image-1;
+        @extend .bikesImages__image-1;
     }
 
     &__image-5-hover {
-        @extend .bike-images__image-1-hover;
+        @extend .bikesImages__image-1-hover;
 
         &-paragraph {
-            @extend .bike-images__image-1-hover-paragraph;
+            @extend .bikesImages__image-1-hover-paragraph;
         }
     }
 
@@ -584,31 +607,35 @@ body {
 
     &__image-6-container {
         width: 100%;
-        background-color: #499175;
+        background-color: #fff;
         position: relative;
         display: flex;
 
-        &:hover .bike-images__image-6 {
+        &:hover .bikesImages__image-6 {
             opacity: 0.3;
         }
 
-        &:hover .bike-images__image-6-hover {
+        &:hover .bikesImages__image-6-hover {
             display: flex;
             justify-content: center;
             align-items: center;    
             flex-direction: column;
         }
+
+        &:hover {
+            background-color: #499175;
+        }
     }
 
     &__image-6 {
-        @extend .bike-images__image-1;
+        @extend .bikesImages__image-1;
     }
 
     &__image-6-hover {
-        @extend .bike-images__image-1-hover;
+        @extend .bikesImages__image-1-hover;
 
         &-paragraph {
-            @extend .bike-images__image-1-hover-paragraph;
+            @extend .bikesImages__image-1-hover-paragraph;
         }
     }
 
@@ -619,68 +646,261 @@ body {
     &__image-7-container {
         width: 50%;
         height: 50%;
-        background-color: #499175;
+        background-color: #fff;
         position: relative;
         display: flex;
 
-        &:hover .bike-images__image-7 {
+        &:hover .bikesImages__image-7 {
             opacity: 0.3;
         }
 
-        &:hover .bike-images__image-7-hover {
+        &:hover .bikesImages__image-7-hover {
             display: flex;
             justify-content: center;
             align-items: center;    
             flex-direction: column;
         }
+
+        &:hover {
+            background-color: #499175;
+        }
     }
 
     &__image-7 {
-        @extend .bike-images__image-1;
+        @extend .bikesImages__image-1;
     }
 
     &__image-7-hover {
-        @extend .bike-images__image-1-hover;
+        @extend .bikesImages__image-1-hover;
 
         &-paragraph {
-            @extend .bike-images__image-1-hover-paragraph;
+            @extend .bikesImages__image-1-hover-paragraph;
         }
     }
 
     &__image-8-container {
         width: 50%;
         height: 50%;
-        background-color: #499175;
+        background-color: #fff;
         position: relative;
         display: flex;
 
-        &:hover .bike-images__image-8 {
+        &:hover .bikesImages__image-8 {
             opacity: 0.3;
         }
 
-        &:hover .bike-images__image-8-hover {
+        &:hover .bikesImages__image-8-hover {
             display: flex;
             justify-content: center;
             align-items: center;    
             flex-direction: column;
         }
+
+        &:hover {
+            background-color: #499175;
+        }
     }
 
     &__image-8 {
-        @extend .bike-images__image-1;
+        @extend .bikesImages__image-1;
     }
 
     &__image-8-hover {
-        @extend .bike-images__image-1-hover;
+        @extend .bikesImages__image-1-hover;
 
         &-paragraph {
-            @extend .bike-images__image-1-hover-paragraph;
+            @extend .bikesImages__image-1-hover-paragraph;
         }
     }
 }
 
+// ****************** DISCOVER SHOP
+
+.discoverShop {
+    background-color: #282f35;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
+    &__button {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        margin: 4rem;
+        max-width: 15rem;
+        height: 3rem;
+        background-color: inherit;
+        transition: 1s;
+        
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            background-color: #499175;
+            color: white;
+            cursor: pointer;
+        }
+
+        &-text {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.3px;
+            padding: 0 2.5rem; 
+            color: #fff;
+        }
+    }
+}
+
+// ****************** SUBSCRIPTION
+
+.subscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__logo {
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+
+    &__text {
+        font-style: italic;
+        font-weight: 300;
+        font-size: 1.5rem;
+        color: #848789;
+        padding-bottom: 2rem;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        padding-bottom: 4rem;
+        flex-wrap: wrap;
+
+        &-email {
+            padding-right: 0.5rem;
+            
+            &-input {
+                color: #acb2b6;
+                font-style: italic;
+                padding: 1rem 0.5rem;
+                min-width: 20rem;
+                box-shadow: 1px 1px 5px 0px #848789;
+                border:none;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            &-button {
+                background-color:#64c29e;
+                padding: 0.9rem 2rem;
+                color: white;
+                font-size: 1rem;
+                border: none;
+            
+                &:focus {
+                    outline: none; 
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background-color:#53b18d;
+                    transition: 1s;
+                }
+            }
+        }
+    }
+}
+
+// ********************** FOOTER 
+
+.footer {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7rem 0;
+
+    &__contact {
+        color: #848789;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: center;
+        width: 33%;
+        flex-direction: column;
+        padding-left: 8rem;
+        &-city {
+            font-weight: 700;
+        }
+
+        &-adress {
+            font-style: italic;
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 33%;
+        color: #fff;
+
+        &-twitter {
+            background-color: #78cdf0;
+            padding: 0.5rem 0.6rem;
+            margin: 0.5rem;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: #67bce0;
+                transition: .5s;
+                cursor: pointer;
+            }
+        }
+
+        &-facebook {
+            background-color: #537bbd;
+            margin: 0.5rem;
+            padding: 0.5rem .8rem;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: #426aac;
+                transition: .5s;
+                cursor: pointer;
+            }
+        }
+
+        &-pinterest {
+            @extend .footer__social-twitter;
+            background-color: #eb5755;
+
+            &:hover {
+                background-color: #ca4644;
+                transition: .5s;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__handcrafted {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 33%;
+
+        &-text {
+            color: #848789;
+            font-style: italic;
+            margin-right: 1rem;
+        }
+    }
+}
+
+    
 
 
 
