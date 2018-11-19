@@ -4,6 +4,7 @@ $fonts: 'Lato', sans-serif;
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -15,9 +16,46 @@ body {
 .header {
     background-image: url(../images/main_header_bcg_image.png);
     height: 100vh;
-    width: auto;
+    width: 100%;
     background-position: top 55% left 50% ;
     background-repeat: no-repeat;
+    position: relative;
+
+    &__mobile-nav {
+        min-width: 15%;
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        &-toggle-button {
+            width: 2.8rem;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0.2rem 0.4rem;
+            vertical-align: middle;
+            margin: 1rem 1rem;
+
+            &:focus {
+                outline: none;
+            }
+
+            &-bar {
+                width: 100%;
+                height: 0.1rem;
+                background: black;
+                display: block;
+                margin: 0.4rem 0;
+            }
+        }
+
+        &-logo {
+            width: 20%;
+        }
+    }
+
+    
     
     .nav {
         display: flex;
@@ -53,22 +91,57 @@ body {
                 }
             }
         }
-        
-        
     }
 }
+
+// ****** MOBILE HEADER (NAV && MOBILE NAV) @media
+@media (max-width: 60rem) {
+    
+    .header {
+        height: 50vh;
+        background-size: 150%;
+        
+
+        .nav {
+            display: none;
+        }
+    }
+    
+    .header__mobile-nav {
+        display: flex;
+    } 
+}
+
+@media (max-width: 40rem) { // 40rem or smaller
+
+    .header {
+        height: 35vh;
+        background-position: bottom 10%;
+        background-size: 180%;
+
+        .nav {
+            display: none;
+        }
+    }
+    
+    .header__mobile-nav {
+        display: flex;
+    }
+}
+
 
 // ***************************************** VINTAGE BIKE 
 
 .vintageBike {
   background-color: #f7f7f7;
-
+  
     &__description {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 6rem 0;
+        padding: 6rem 8rem;
         font-size: .8rem;
+        
 
         &-title {
             font-size: 1.1rem;
@@ -81,14 +154,57 @@ body {
             line-height: 1.5rem;
             color: #848789; 
             text-align: center;
+            max-width: 70rem;
         }
     }
 }
 
-// ***************************************** SECOND MODEL 
+// ------------------- vintageBike @media 
 
-.vintageOliva {
+@media (max-width: 60rem) {
+    .vintageBike {
+        background-color: #f7f7f7;
+      
+          &__description {
+              padding: 3rem 6rem;
+              
+                &-title {
+                    padding: 0 1rem;
+                    text-align: center;
+                }
+              
+                &-paragraph {
+                    text-align: center;
+                }
+          }
+      }
+}
+
+@media (max-width: 40rem) { // 40rem or smaller
+    
+    .vintageBike {
+      
+        &__description {
+            padding: 2rem 0;
+      
+            &-title {
+                text-align: center;
+            }
+              
+            &-paragraph {
+                padding: 2rem 1.5rem;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+
+// ***************************************** vintageOliva
+
+.vintageOliva {    // to big padding provides white margin on mobile devices -- need to be fixed
     display: flex;
+    // flex-wrap: wrap;
 
     &__big-image-container {
         display: flex;
@@ -166,8 +282,6 @@ body {
         }
     }
 
-    
-
     &__small-image-container {
         display: flex;
 
@@ -177,8 +291,62 @@ body {
             background-color: #282f35;
         }
     }
+}
 
-    
+// ---------------  vintageOliva @media 
+
+@media (max-width: 80rem) {
+    .vintageOliva { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__big-image-container {
+            width: 100%;
+        }
+
+        &__description {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 0 2rem;
+
+            &-logo {
+                padding-top: 1.5rem;
+            }
+        }
+        
+        &__small-image-container {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 40rem) {
+
+    .vintageOliva { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__big-image-container {
+            width: 100%;
+        }
+
+        &__description {
+            width: 100%;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__small-image-container {
+            width: 100%;
+            display: flex;
+        }
+    }
 }
 
 // ***************************************** LA BORIOSA
