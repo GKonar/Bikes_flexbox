@@ -90,8 +90,8 @@ body {
 
 @media (max-width: 60rem) {
   .header {
-    height: 50vh;
-    background-size: 150%;
+    height: 60vh;
+    background-size: 100%;
   }
   .header .nav {
     display: none;
@@ -1208,6 +1208,21 @@ body {
   transition: 1s;
 }
 
+@media (max-width: 40rem) {
+  .subscription__form {
+    justify-content: center;
+    padding-bottom: 3rem;
+  }
+  .subscription__form-email {
+    padding-right: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  .subscription__form-email-button:hover {
+    cursor: pointer;
+    background-color: transparent;
+  }
+}
+
 .footer {
   background-color: #f7f7f7;
   display: flex;
@@ -1289,6 +1304,50 @@ body {
   color: #848789;
   font-style: italic;
   margin-right: 1rem;
+}
+
+@media (max-width: 40rem) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+  }
+  .footer__contact {
+    color: #848789;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 1.5rem;
+  }
+  .footer__contact-adress {
+    font-style: italic;
+  }
+  .footer__social {
+    align-items: center;
+    width: 100%;
+  }
+  .footer__social-twitter:hover, .footer__social-pinterest:hover {
+    background-color: #78cdf0;
+    cursor: default;
+  }
+  .footer__social-facebook:hover {
+    background-color: #537bbd;
+    cursor: default;
+  }
+  .footer__social-pinterest:hover {
+    background-color: #eb5755;
+    cursor: default;
+  }
+  .footer__handcrafted {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-top: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

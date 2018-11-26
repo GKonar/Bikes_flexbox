@@ -98,8 +98,8 @@ body {
 @media (max-width: 60rem) {
     
     .header {
-        height: 50vh;
-        background-size: 150%;
+        height: 60vh;
+        background-size: 100%;
         
 
         .nav {
@@ -1649,6 +1649,31 @@ body {
     }
 }
 
+// ****************** @media ***************** SUBSCRIPTION
+
+@media (max-width: 40rem) {
+    .subscription {
+    
+        &__form {
+            justify-content: center;
+            padding-bottom: 3rem;
+    
+            &-email {
+                padding-right: 0.5rem;
+                padding-bottom: 1rem;
+    
+                &-button {
+                
+                    &:hover {
+                        cursor: pointer;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // ********************** FOOTER 
 
 .footer {
@@ -1730,6 +1755,68 @@ body {
             color: #848789;
             font-style: italic;
             margin-right: 1rem;
+        }
+    }
+}
+
+// ****************** @media ***************** FOOTER 
+
+@media (max-width: 40rem) {
+    .footer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem;
+    
+        &__contact {
+            color: #848789;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding-left: 0;
+            padding-bottom: 1.5rem;
+    
+            &-adress {
+                font-style: italic;
+            }
+        }
+    
+        &__social {
+            align-items: center;
+            width: 100%;
+    
+            &-twitter {
+    
+                &:hover {
+                    background-color: #78cdf0;
+                    cursor: default;
+                }
+            }
+    
+            &-facebook {
+    
+                &:hover {
+                    background-color: #537bbd;
+                    cursor: default;
+                }
+            }
+    
+            &-pinterest {
+    
+                &:hover {
+                    background-color: #eb5755;
+                    cursor: default;
+                }
+            }
+        }
+    
+        &__handcrafted {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding-top: 1.5rem;
         }
     }
 }
