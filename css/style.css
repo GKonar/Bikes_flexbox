@@ -793,187 +793,66 @@ body {
 }
 
 @media (max-width: 80rem) {
-  .bikesImages {
-    display: flex;
-  }
-  .bikesImages__container-left {
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-    background-color: #FCFFFF;
-    position: relative;
-  }
-  .bikesImages__container-left-top-images {
-    display: flex;
-    height: 50%;
-  }
   .bikesImages__image-1-container {
     background-color: none;
   }
   .bikesImages__image-1-container:hover .bikesImages__image-1, .bikesImages__image-1-container:hover .bikesImages__image-2, .bikesImages__image-1-container:hover .bikesImages__image-3, .bikesImages__image-1-container:hover .bikesImages__image-4, .bikesImages__image-1-container:hover .bikesImages__image-5, .bikesImages__image-1-container:hover .bikesImages__image-6, .bikesImages__image-1-container:hover .bikesImages__image-7, .bikesImages__image-1-container:hover .bikesImages__image-8 {
     opacity: 1;
   }
-  .bikesImages__image-1-container:hover .bikesImages__image-1-hover, .bikesImages__image-1-container:hover .bikesImages__image-2-hover, .bikesImages__image-1-container:hover .bikesImages__image-3-hover, .bikesImages__image-1-container:hover .bikesImages__image-4-hover, .bikesImages__image-1-container:hover .bikesImages__image-5-hover, .bikesImages__image-1-container:hover .bikesImages__image-6-hover, .bikesImages__image-1-container:hover .bikesImages__image-7-hover, .bikesImages__image-1-container:hover .bikesImages__image-8-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-1-container:hover {
-    background-color: none;
+    background-color: transparent;
   }
   .bikesImages__image-1-hover, .bikesImages__image-2-hover, .bikesImages__image-3-hover, .bikesImages__image-4-hover, .bikesImages__image-5-hover, .bikesImages__image-6-hover, .bikesImages__image-7-hover, .bikesImages__image-8-hover {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: none;
   }
   .bikesImages__image-1-hover-paragraph, .bikesImages__image-2-hover-paragraph, .bikesImages__image-3-hover-paragraph, .bikesImages__image-4-hover-paragraph, .bikesImages__image-5-hover-paragraph, .bikesImages__image-6-hover-paragraph, .bikesImages__image-7-hover-paragraph, .bikesImages__image-8-hover-paragraph {
     color: #ffffff;
     text-shadow: 1px 1px 1px black;
   }
-  .bikesImages__image-2-container {
-    width: 50%;
-    height: 100%;
-    position: relative;
-    background-color: #fff;
-  }
   .bikesImages__image-2-container:hover .bikesImages__image-2 {
     opacity: 1;
-  }
-  .bikesImages__image-2-container:hover .bikesImages__image-2-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .bikesImages__image-2-container:hover {
-    background-color: transparent;
   }
   .bikesImages__image-2 {
     background-color: black;
   }
-  .bikesImages__image-3-container-bottom-left {
-    width: 100%;
-    height: 50%;
-    position: relative;
-    background-color: #fff;
-  }
   .bikesImages__image-3-container-bottom-left:hover .bikesImages__image-3 {
     opacity: 1;
-  }
-  .bikesImages__image-3-container-bottom-left:hover .bikesImages__image-3-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .bikesImages__image-3-container-bottom-left:hover {
-    background-color: #499175;
-  }
-  .bikesImages__container-middle {
-    display: flex;
-    width: 33%;
-  }
-  .bikesImages__image-4-container {
-    width: 50%;
-    background-color: #fff;
-    position: relative;
   }
   .bikesImages__image-4-container:hover .bikesImages__image-4 {
     opacity: 1;
   }
-  .bikesImages__image-4-container:hover .bikesImages__image-4-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-4-container:hover {
-    background-color: #499175;
+    background-color: transparent;
   }
-  .bikesImages__image-5-container {
-    width: 50%;
-    background-color: #fff;
-    position: relative;
+  .bikesImages__image-4 {
+    background-color: transparent;
   }
   .bikesImages__image-5-container:hover .bikesImages__image-5 {
     opacity: 1;
   }
-  .bikesImages__image-5-container:hover .bikesImages__image-5-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-5-container:hover {
-    background-color: #499175;
-  }
-  .bikesImages__container-right {
-    display: flex;
-    width: 34%;
-    flex-direction: column;
-    align-items: center;
-  }
-  .bikesImages__image-6-container {
-    width: 100%;
-    background-color: #fff;
-    position: relative;
-    display: flex;
+    background-color: transparent;
   }
   .bikesImages__image-6-container:hover .bikesImages__image-6 {
     opacity: 1;
   }
-  .bikesImages__image-6-container:hover .bikesImages__image-6-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-6-container:hover {
-    background-color: #499175;
-  }
-  .bikesImages__container-right-bottom {
-    display: flex;
-  }
-  .bikesImages__image-7-container {
-    width: 50%;
-    height: 50%;
-    background-color: #fff;
-    position: relative;
-    display: flex;
+    background-color: transparent;
   }
   .bikesImages__image-7-container:hover .bikesImages__image-7 {
     opacity: 1;
   }
-  .bikesImages__image-7-container:hover .bikesImages__image-7-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-7-container:hover {
-    background-color: #499175;
-  }
-  .bikesImages__image-8-container {
-    width: 50%;
-    height: 50%;
-    background-color: #fff;
-    position: relative;
-    display: flex;
+    background-color: transparent;
   }
   .bikesImages__image-8-container:hover .bikesImages__image-8 {
     opacity: 1;
   }
-  .bikesImages__image-8-container:hover .bikesImages__image-8-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-8-container:hover {
-    background-color: #499175;
+    background-color: transparent;
   }
 }
 
@@ -990,29 +869,20 @@ body {
     height: 50%;
   }
   .bikesImages__image-1-container {
-    background-color: none;
+    background-color: transparent;
   }
   .bikesImages__image-1-container:hover .bikesImages__image-1, .bikesImages__image-1-container:hover .bikesImages__image-2, .bikesImages__image-1-container:hover .bikesImages__image-3, .bikesImages__image-1-container:hover .bikesImages__image-4, .bikesImages__image-1-container:hover .bikesImages__image-5, .bikesImages__image-1-container:hover .bikesImages__image-6, .bikesImages__image-1-container:hover .bikesImages__image-7, .bikesImages__image-1-container:hover .bikesImages__image-8 {
     opacity: 1;
   }
-  .bikesImages__image-1-container:hover .bikesImages__image-1-hover, .bikesImages__image-1-container:hover .bikesImages__image-2-hover, .bikesImages__image-1-container:hover .bikesImages__image-3-hover, .bikesImages__image-1-container:hover .bikesImages__image-4-hover, .bikesImages__image-1-container:hover .bikesImages__image-5-hover, .bikesImages__image-1-container:hover .bikesImages__image-6-hover, .bikesImages__image-1-container:hover .bikesImages__image-7-hover, .bikesImages__image-1-container:hover .bikesImages__image-8-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-1-container:hover {
-    background-color: none;
+    background-color: transparent;
   }
-  .bikesImages__image-1-hover, .bikesImages__image-2-hover, .bikesImages__image-3-hover, .bikesImages__image-4-hover, .bikesImages__image-5-hover, .bikesImages__image-6-hover, .bikesImages__image-7-hover, .bikesImages__image-8-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: none;
+  .bikesImages__image-1-hover-icon {
+    width: 20%;
   }
   .bikesImages__image-1-hover-paragraph, .bikesImages__image-2-hover-paragraph, .bikesImages__image-3-hover-paragraph, .bikesImages__image-4-hover-paragraph, .bikesImages__image-5-hover-paragraph, .bikesImages__image-6-hover-paragraph, .bikesImages__image-7-hover-paragraph, .bikesImages__image-8-hover-paragraph {
     color: #ffffff;
+    font-size: 1.5rem;
     text-shadow: 1px 1px 1px black;
   }
   .bikesImages__image-2-container {
@@ -1021,12 +891,6 @@ body {
   }
   .bikesImages__image-2-container:hover .bikesImages__image-2 {
     opacity: 1;
-  }
-  .bikesImages__image-2-container:hover .bikesImages__image-2-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
   }
   .bikesImages__image-2-container:hover {
     background-color: transparent;
@@ -1037,90 +901,53 @@ body {
     width: 102.5%;
     height: 100%;
   }
-  .bikesImages__image-2-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .bikesImages__image-3-container-bottom-left {
-    width: 100%;
-    height: 50%;
-    position: relative;
-    background-color: #fff;
+  .bikesImages__image-2-hover-icon {
+    width: 20%;
   }
   .bikesImages__image-3-container-bottom-left:hover .bikesImages__image-3 {
     opacity: 1;
   }
-  .bikesImages__image-3-container-bottom-left:hover .bikesImages__image-3-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-3-container-bottom-left:hover {
     background-color: transparent;
+  }
+  .bikesImages__image-3-hover-icon {
+    width: 10%;
   }
   .bikesImages__container-middle {
     display: flex;
     width: 100%;
   }
-  .bikesImages__image-4-container {
-    width: 50%;
-    background-color: #fff;
-    position: relative;
-  }
   .bikesImages__image-4-container:hover .bikesImages__image-4 {
     opacity: 1;
   }
-  .bikesImages__image-4-container:hover .bikesImages__image-4-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-4-container:hover {
-    background-color: none;
+    background-color: transparent;
   }
-  .bikesImages__image-5-container {
-    width: 50%;
-    background-color: #fff;
-    position: relative;
+  .bikesImages__image-4-hover-icon {
+    width: 20%;
   }
   .bikesImages__image-5-container:hover .bikesImages__image-5 {
     opacity: 1;
   }
-  .bikesImages__image-5-container:hover .bikesImages__image-5-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-5-container:hover {
-    background-color: none;
+    background-color: transparent;
+  }
+  .bikesImages__image-5-hover-icon {
+    width: 20%;
   }
   .bikesImages__container-right {
     display: flex;
     width: 100%;
     align-items: center;
   }
-  .bikesImages__image-6-container {
-    width: 100%;
-    background-color: #fff;
-    position: relative;
-    display: flex;
-  }
   .bikesImages__image-6-container:hover .bikesImages__image-6 {
     opacity: 1;
   }
-  .bikesImages__image-6-container:hover .bikesImages__image-6-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-6-container:hover {
-    background-color: none;
+    background-color: transparent;
+  }
+  .bikesImages__image-6-hover-icon {
+    width: 10%;
   }
   .bikesImages__container-right-bottom {
     display: flex;
@@ -1128,47 +955,35 @@ body {
   }
   .bikesImages__image-7-container {
     width: 100%;
-    background-color: #fff;
-    position: relative;
-    display: flex;
   }
   .bikesImages__image-7-container:hover .bikesImages__image-7 {
     opacity: 1;
   }
-  .bikesImages__image-7-container:hover .bikesImages__image-7-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-7-container:hover {
-    background-color: none;
+    background-color: transparent;
   }
   .bikesImages__image-7 {
     width: 100%;
     height: 100%;
   }
+  .bikesImages__image-7-hover-icon {
+    width: 20%;
+  }
   .bikesImages__image-8-container {
     width: 100%;
-    background-color: #fff;
-    position: relative;
-    display: flex;
   }
   .bikesImages__image-8-container:hover .bikesImages__image-8 {
     opacity: 1;
   }
-  .bikesImages__image-8-container:hover .bikesImages__image-8-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-8-container:hover {
-    background-color: none;
+    background-color: transparent;
   }
   .bikesImages__image-8 {
     width: 100%;
     height: 100%;
+  }
+  .bikesImages__image-8-hover-icon {
+    width: 20%;
   }
 }
 
@@ -1190,25 +1005,13 @@ body {
   .bikesImages__image-1-container:hover .bikesImages__image-1, .bikesImages__image-1-container:hover .bikesImages__image-2, .bikesImages__image-1-container:hover .bikesImages__image-3, .bikesImages__image-1-container:hover .bikesImages__image-4, .bikesImages__image-1-container:hover .bikesImages__image-5, .bikesImages__image-1-container:hover .bikesImages__image-6, .bikesImages__image-1-container:hover .bikesImages__image-7, .bikesImages__image-1-container:hover .bikesImages__image-8 {
     opacity: 1;
   }
-  .bikesImages__image-1-container:hover .bikesImages__image-1-hover, .bikesImages__image-1-container:hover .bikesImages__image-2-hover, .bikesImages__image-1-container:hover .bikesImages__image-3-hover, .bikesImages__image-1-container:hover .bikesImages__image-4-hover, .bikesImages__image-1-container:hover .bikesImages__image-5-hover, .bikesImages__image-1-container:hover .bikesImages__image-6-hover, .bikesImages__image-1-container:hover .bikesImages__image-7-hover, .bikesImages__image-1-container:hover .bikesImages__image-8-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .bikesImages__image-1-container:hover {
-    background-color: none;
-  }
-  .bikesImages__image-1-hover, .bikesImages__image-2-hover, .bikesImages__image-3-hover, .bikesImages__image-4-hover, .bikesImages__image-5-hover, .bikesImages__image-6-hover, .bikesImages__image-7-hover, .bikesImages__image-8-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: none;
-  }
   .bikesImages__image-1-hover-paragraph, .bikesImages__image-2-hover-paragraph, .bikesImages__image-3-hover-paragraph, .bikesImages__image-4-hover-paragraph, .bikesImages__image-5-hover-paragraph, .bikesImages__image-6-hover-paragraph, .bikesImages__image-7-hover-paragraph, .bikesImages__image-8-hover-paragraph {
     color: #ffffff;
     text-shadow: 1px 1px 1px black;
+    font-size: 1rem;
+  }
+  .bikesImages__image-1-hover-icon {
+    width: 30%;
   }
   .bikesImages__image-2-container {
     display: block;
@@ -1216,12 +1019,6 @@ body {
   }
   .bikesImages__image-2-container:hover .bikesImages__image-2 {
     opacity: 1;
-  }
-  .bikesImages__image-2-container:hover .bikesImages__image-2-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
   }
   .bikesImages__image-2-container:hover {
     background-color: transparent;
@@ -1238,126 +1035,70 @@ body {
     align-items: center;
     flex-direction: column;
   }
-  .bikesImages__image-3-container-bottom-left {
-    width: 100%;
-    height: 50%;
-    position: relative;
-    background-color: #fff;
+  .bikesImages__image-2-hover-icon {
+    width: 30%;
   }
   .bikesImages__image-3-container-bottom-left:hover .bikesImages__image-3 {
     opacity: 1;
   }
-  .bikesImages__image-3-container-bottom-left:hover .bikesImages__image-3-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-3-container-bottom-left:hover {
     background-color: transparent;
   }
-  .bikesImages__container-middle {
-    display: flex;
-    width: 100%;
-  }
-  .bikesImages__image-4-container {
-    width: 50%;
-    background-color: #fff;
-    position: relative;
+  .bikesImages__image-3-hover-icon {
+    width: 15%;
   }
   .bikesImages__image-4-container:hover .bikesImages__image-4 {
     opacity: 1;
   }
-  .bikesImages__image-4-container:hover .bikesImages__image-4-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-4-container:hover {
     background-color: none;
   }
-  .bikesImages__image-5-container {
-    width: 50%;
-    background-color: #fff;
-    position: relative;
+  .bikesImages__image-4-hover-icon {
+    width: 30%;
   }
   .bikesImages__image-5-container:hover .bikesImages__image-5 {
     opacity: 1;
   }
-  .bikesImages__image-5-container:hover .bikesImages__image-5-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-5-container:hover {
-    background-color: none;
+    background-color: transparent;
   }
-  .bikesImages__container-right {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-  .bikesImages__image-6-container {
-    width: 100%;
-    background-color: #fff;
-    position: relative;
-    display: flex;
+  .bikesImages__image-5-hover-icon {
+    width: 30%;
   }
   .bikesImages__image-6-container:hover .bikesImages__image-6 {
     opacity: 1;
   }
-  .bikesImages__image-6-container:hover .bikesImages__image-6-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-6-container:hover {
-    background-color: none;
+    background-color: transparent;
   }
-  .bikesImages__container-right-bottom {
-    display: flex;
+  .bikesImages__image-6-hover-icon {
+    width: 15%;
   }
   .bikesImages__image-7-container {
     width: 50%;
     height: 50%;
-    background-color: #fff;
-    position: relative;
-    display: flex;
   }
   .bikesImages__image-7-container:hover .bikesImages__image-7 {
     opacity: 1;
   }
-  .bikesImages__image-7-container:hover .bikesImages__image-7-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-7-container:hover {
-    background-color: none;
+    background-color: transparent;
+  }
+  .bikesImages__image-7-hover-icon {
+    width: 30%;
   }
   .bikesImages__image-8-container {
     width: 50%;
     height: 50%;
-    background-color: #fff;
-    position: relative;
-    display: flex;
   }
   .bikesImages__image-8-container:hover .bikesImages__image-8 {
     opacity: 1;
   }
-  .bikesImages__image-8-container:hover .bikesImages__image-8-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .bikesImages__image-8-container:hover {
-    background-color: none;
+    background-color: transparent;
+  }
+  .bikesImages__image-8-hover-icon {
+    width: 30%;
   }
 }
 
@@ -1393,6 +1134,16 @@ body {
   letter-spacing: 1.3px;
   padding: 0 2.5rem;
   color: #fff;
+}
+
+@media (max-width: 40rem), (max-width: 60rem), (max-width: 80rem) {
+  .discoverShop__button {
+    background-color: #499175;
+  }
+  .discoverShop__button:hover {
+    background-color: transparent;
+    cursor: default;
+  }
 }
 
 .subscription {
