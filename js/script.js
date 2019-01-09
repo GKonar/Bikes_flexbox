@@ -15,19 +15,24 @@ const mobileNavElements = document.querySelector('.header__mobile-nav-elements')
 
 // Toggle/Hide Nav Menu
 hamburgerMenuToggleButton.addEventListener('click', () => { 
-    mobileNavElements.style.display = 'flex';
-    mobileBackdrop.style.display = 'flex';
+    mobileNavElements.classList.remove('header__mobile-nav-animate-back');
+    mobileNavElements.classList.add('header__mobile-nav-animate');
+    setTimeout(() => {
+        mobileBackdrop.style.display = 'flex';
+    }, 150)
 });
 
 hamburgerMenuHideButton.addEventListener('click', () => {
-    mobileNavElements.style.display = 'none';
+    mobileNavElements.classList.remove('header__mobile-nav-animate');
+    mobileNavElements.classList.add('header__mobile-nav-animate-back');
     mobileBackdrop.style.display = 'none';
-})
+});
 
 mobileBackdrop.addEventListener('click', () => {
-    mobileNavElements.style.display = 'none';
+    // mobileNavElements.classList.add('.nav');
     mobileBackdrop.style.display = 'none';
-})
+    mobileNavElements.classList.add('header__mobile-nav-animate-back');
+});
 
 
 

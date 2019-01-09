@@ -116,12 +116,12 @@ body {
     
     .header {
         height: 100vh;
-        background-size: 160%;
-        background-position: top 40% right 50%; 
+        background-size: 100%;
+        // background-position: top 40% right 50%; 
         position: relative;
 
         &__mobile-nav-elements {
-            display: none;
+            display: flex;
             text-align: center;
             justify-content: center;
             position: absolute;
@@ -130,6 +130,7 @@ body {
             height: 150vh;
             opacity: 0.95;
             z-index: 10;
+            left: -70%;
 
             &-toggle-button {
                 position: absolute;
@@ -191,6 +192,16 @@ body {
     .header__mobile-nav {
         display: flex;
     } 
+
+    .header__mobile-nav-animate {
+        left: 0%;
+        transition: .5s;
+    }
+
+    .header__mobile-nav-animate-back {
+        left: -70%;
+        transition: .5s;
+    }
 }
 
 @media (max-width: 40rem) { // 40rem or smaller
