@@ -18,6 +18,16 @@ body {
   position: relative;
 }
 
+.header__mobileBackdrop {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #155e4f;
+  opacity: 0.5;
+  z-index: 2;
+  display: none;
+}
+
 .header__mobile-nav {
   min-width: 15%;
   position: absolute;
@@ -35,7 +45,9 @@ body {
   cursor: pointer;
   padding: 0.2rem 0.4rem;
   vertical-align: middle;
-  margin: 1rem 1rem;
+  margin: 0.5rem 0rem;
+  position: relative;
+  right: 15%;
 }
 
 .header__mobile-nav-toggle-button:focus {
@@ -52,6 +64,12 @@ body {
 
 .header__mobile-nav-logo {
   width: 20%;
+  position: relative;
+  right: 10%;
+}
+
+.header__mobile-nav-elements {
+  display: none;
 }
 
 .header .nav {
@@ -97,8 +115,66 @@ body {
 
 @media (max-width: 60rem) {
   .header {
-    height: 60vh;
-    background-size: 100%;
+    height: 100vh;
+    background-size: 160%;
+    background-position: top 40% right 50%;
+    position: relative;
+  }
+  .header__mobile-nav-elements {
+    display: none;
+    text-align: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    position: absolute;
+    background-color: #282f35;
+    width: 40%;
+    height: 150vh;
+    opacity: 0.95;
+    z-index: 10;
+  }
+  .header__mobile-nav-elements-toggle-button {
+    position: absolute;
+    width: 2.8rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem 0.4rem;
+    z-index: 1;
+    left: 2%;
+  }
+  .header__mobile-nav-elements-toggle-button:focus {
+    outline: none;
+  }
+  .header__mobile-nav-elements-toggle-button-bar {
+    width: 100%;
+    height: 0.1rem;
+    background: white;
+    display: block;
+    margin: 0.4rem 0;
+  }
+  .header__mobile-nav-elements-items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    list-style-type: none;
+    margin-top: 10%;
+  }
+  .header__mobile-nav-elements-items-logo {
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+  .header__mobile-nav-elements-items-item {
+    font-size: 2rem;
+  }
+  .header__mobile-nav-elements-items-item-link {
+    text-decoration: none;
+    color: white;
+  }
+  .header__mobile-nav-elements-items-item-dot {
+    color: white;
   }
   .header .nav {
     display: none;
@@ -114,6 +190,12 @@ body {
     height: 35vh;
     background-position: bottom 10%;
     background-size: 180%;
+  }
+  .header__mobile-nav-elements {
+    width: 70%;
+  }
+  .header__mobile-nav-elements-items {
+    margin-top: 25%;
   }
   .header .nav {
     display: none;
