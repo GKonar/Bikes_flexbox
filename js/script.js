@@ -1,25 +1,27 @@
-const vintageBikeSection = document.querySelector('.vintageBike');
-const footer = document.querySelector(".footer");
-
-// Menu items 
+// Nav items 
+const nav = document.querySelector('.nav');
+const scrollTopButton = document.querySelector('.header__scrollTopButton')
+const navItemsLinks = document.getElementsByClassName('nav__items-link');
 const about = document.querySelector('.nav__items-link-about');
 const work = document.querySelector('.nav__items-link-work');
 const shop = document.querySelector('.nav__items-link-shop');
 const contact = document.querySelector('.nav__items-link-contact');
-
-// Mobile nav items
+// Mobile nav elements
 const hamburgerMenuToggleButton =  document.querySelector('.header__mobile-nav-toggle-button');
 const hamburgerMenuHideButton =  document.querySelector('.header__mobile-nav-elements-toggle-button');
 const mobileBackdrop = document.querySelector('.header__mobileBackdrop');  
 const mobileNavElements = document.querySelector('.header__mobile-nav-elements');
+// Sections
+const vintageBikeSection = document.querySelector('.vintageBike'); 
+const vintageOlivaSection = document.querySelector('.vintageOliva'); 
+const bikesImagesSection = document.querySelector('.bikesImages'); 
+const subscriptionSection = document.querySelector('.subscription'); 
 
 // Toggle/Hide Nav Menu
 hamburgerMenuToggleButton.addEventListener('click', () => { 
     mobileNavElements.classList.remove('header__mobile-nav-animate-back');
     mobileNavElements.classList.add('header__mobile-nav-animate');
-    setTimeout(() => {
-        mobileBackdrop.style.display = 'flex';
-    }, 150)
+    mobileBackdrop.style.display = 'flex';
 });
 
 hamburgerMenuHideButton.addEventListener('click', () => {
@@ -29,16 +31,48 @@ hamburgerMenuHideButton.addEventListener('click', () => {
 });
 
 mobileBackdrop.addEventListener('click', () => {
-    // mobileNavElements.classList.add('.nav');
+    mobileBackdrop.style.display = 'none';
+    mobileNavElements.classList.add('header__mobile-nav-animate-back');
+});
+
+window.addEventListener('scroll', () => {
     mobileBackdrop.style.display = 'none';
     mobileNavElements.classList.add('header__mobile-nav-animate-back');
 });
 
 
 
- 
-// Tweeter Carousel solo JS
+// FIXED MENU 
+const changeColor = () => {
+    let i;
+    for (i = 0 ; i < navItemsLinks.length ; i++) {
+        navItemsLinks[i].style.color = 'white';
+    }
+};
 
+const changeColorBack = () => {
+    let i;
+    for (i = 0 ; i < navItemsLinks.length ; i++) {
+        navItemsLinks[i].style.color = '#4d4959';
+    }
+};
+
+window.addEventListener('scroll', () => {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        nav.classList.add('nav__fixed-menu');
+        nav.style.color = 'white';
+        scrollTopButton.classList.add('header__scrollTopButton-showUp')
+        changeColor();
+    } else {
+        nav.classList.remove('nav__fixed-menu');
+        nav.style.color = '#4d4959';
+        scrollTopButton.classList.remove('header__scrollTopButton-showUp')
+        changeColorBack();
+    }
+});
+
+
+// Tweeter Carousel
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -72,27 +106,38 @@ function showSlides(n) {
         dots[slideIndex-1].className += " active";
 }
 
-// Smooth scroll JS solo JS
 
-// function scrollTo(element, to, duration) {
-//     if (duration < 0) return; // returns undefined
+// Smooth scrollTo
+const scrollTo = (element, to, duration) => {
+    if (duration < 0) return; // undefined
     
-//     const difference = to - element.scrollTop;
-//     // console.log(difference)
-//     // console.log(to); // liczba pikseli o jaką się przesówa do podanego elementu 'to'
-//     // console.log(element.scrollTop); // liczba pikseli o jaką się przesówa od góry
-//     const perTick = difference / duration * 10;
-//     // console.log(perTick);
+    const difference = to - element.scrollTop;
+    const perTick = difference / duration * 10;
 
-//     setTimeout(function() {
-//         element.scrollTop = element.scrollTop + perTick;
-//         console.log(element.scrollTop);
-//         if (element.scrollTop === to) return;
-//         scrollTo(element, to, duration - 10);
-//     }, 10);
-// }
+    setTimeout(function() {
+        element.scrollTop = element.scrollTop + perTick;
+        if (element.scrollTop === to) return; // undefined
+        scrollTo(element, to, duration - 10);
+    }, 10); // co 10 ms wykonuje te funkcje
+}
 
+// Smooth scroll to elments
+about.addEventListener("click" , () => {
+    scrollTo(document.documentElement, vintageBikeSection.offsetTop , 200);
+});
 
-// about.addEventListener("click" ,function () {
-//     scrollTo(document.documentElement, vintageBikeSection.offsetTop, 200);
-// });
+work.addEventListener("click" , () => {
+    scrollTo(document.documentElement, vintageOlivaSection.offsetTop - 114, 300);
+});
+
+shop.addEventListener('click', () => {
+    scrollTo(document.documentElement, bikesImagesSection.offsetTop - 114, 400);
+});
+
+contact.addEventListener('click', () => {
+    scrollTo(document.documentElement, subscriptionSection.offsetTop - 115, 500);
+});
+
+scrollTopButton.addEventListener('click', () => {
+    scrollTo(document.documentElement, nav.offsetTop , 300);
+})
