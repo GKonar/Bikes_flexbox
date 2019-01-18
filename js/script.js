@@ -1,16 +1,25 @@
 // Nav items 
 const nav = document.querySelector('.nav');
-const scrollTopButton = document.querySelector('.header__scrollTopButton')
+const mobileNav = document.querySelector('.header__mobile-nav');
+const scrollTopButton = document.querySelector('.header__scrollTopButton');
 const navItemsLinks = document.getElementsByClassName('nav__items-link');
 const about = document.querySelector('.nav__items-link-about');
 const work = document.querySelector('.nav__items-link-work');
 const shop = document.querySelector('.nav__items-link-shop');
 const contact = document.querySelector('.nav__items-link-contact');
+
+// // Mobile nav items 
+// const mobileAbout = document.querySelector('.mobile-about');
+// const mobileWork = document.querySelector('.mobile-work');
+// const mobileShop = document.querySelector('.mobile-shop');
+// const mobileContact = document.querySelector('.mobile-contact');
+
 // Mobile nav elements
 const hamburgerMenuToggleButton =  document.querySelector('.header__mobile-nav-toggle-button');
 const hamburgerMenuHideButton =  document.querySelector('.header__mobile-nav-elements-toggle-button');
 const mobileBackdrop = document.querySelector('.header__mobileBackdrop');  
 const mobileNavElements = document.querySelector('.header__mobile-nav-elements');
+
 // Sections
 const vintageBikeSection = document.querySelector('.vintageBike'); 
 const vintageOlivaSection = document.querySelector('.vintageOliva'); 
@@ -42,7 +51,7 @@ window.addEventListener('scroll', () => {
 
 
 
-// FIXED MENU 
+// Fixed menu 
 const changeColor = () => {
     let i;
     for (i = 0 ; i < navItemsLinks.length ; i++) {
@@ -61,12 +70,12 @@ window.addEventListener('scroll', () => {
     if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
         nav.classList.add('nav__fixed-menu');
         nav.style.color = 'white';
-        scrollTopButton.classList.add('header__scrollTopButton-showUp')
+        scrollTopButton.classList.add('header__scrollTopButton-showUp');
         changeColor();
     } else {
         nav.classList.remove('nav__fixed-menu');
         nav.style.color = '#4d4959';
-        scrollTopButton.classList.remove('header__scrollTopButton-showUp')
+        scrollTopButton.classList.remove('header__scrollTopButton-showUp');
         changeColorBack();
     }
 });
@@ -94,32 +103,32 @@ function showSlides(n) {
         
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none"; 
-            console.log(slides[i]);
+            // console.log(slides[i]);
+            // console.log(slides)
         }
     
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
-            console.log(dots[i]);
+            // console.log(dots[i]);
         }
 
         slides[slideIndex-1].style.display = "block"; 
         dots[slideIndex-1].className += " active";
 }
 
-
 // Smooth scrollTo
 const scrollTo = (element, to, duration) => {
-    if (duration < 0) return; // undefined
-    
+    if (duration <= 0) return; 
     const difference = to - element.scrollTop;
     const perTick = difference / duration * 10;
-
-    setTimeout(function() {
+    //setTimeout calls it until it is done in a recursive manner. 
+    setTimeout(() => { 
         element.scrollTop = element.scrollTop + perTick;
-        if (element.scrollTop === to) return; // undefined
-        scrollTo(element, to, duration - 10);
-    }, 10); // co 10 ms wykonuje te funkcje
-}
+        if (element.scrollTop === to) return; 
+        scrollTo(element, to, duration -10); 
+    }, 10); 
+};
+
 
 // Smooth scroll to elments
 about.addEventListener("click" , () => {
@@ -138,6 +147,10 @@ contact.addEventListener('click', () => {
     scrollTo(document.documentElement, subscriptionSection.offsetTop - 115, 500);
 });
 
+// Smooth scroll to top
+
 scrollTopButton.addEventListener('click', () => {
     scrollTo(document.documentElement, nav.offsetTop , 300);
-})
+    console.log('click');
+});
+

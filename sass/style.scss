@@ -45,7 +45,7 @@ body {
     &__mobileBackdrop {
         position: absolute;
         width: 100%;
-        height: 100vh;
+        height: 300vh;
         background-color: rgb(21, 94, 79);
         opacity: 0.5;
         z-index: 2;
@@ -151,19 +151,21 @@ body {
 }
 
 // ****** MOBILE HEADER (NAV && MOBILE NAV) @media
-@media (max-width: 100rem) { 
-    .header {
-        height: 50vh;
-        background-size: cover;
-        position: relative;
-    }
-}
 
 @media (max-width: 80rem) { 
     .header {
-        height: 60vh;
+        height: 100vh;
         background-size: cover;
         position: relative;
+
+        &__scrollTopButton {
+            display: fixed;
+        }
+    
+        .header__scrollTopButton-showUp {
+            right: 2%;
+            transition: .5s;
+        }
     }
 }
 
@@ -171,9 +173,18 @@ body {
     
     .header {
         height: 70vh;
-        background-size: 120%;
+        background-size: cover;
         background-position: top 55% right 50%; 
         position: relative;
+
+        &__scrollTopButton {
+            display: none;
+        }
+    
+        .header__scrollTopButton-showUp {
+            right: 2%;
+            transition: .5s;
+        }
 
         &__mobile-nav-elements {
             display: flex;
@@ -182,7 +193,7 @@ body {
             position: absolute;
             background-color: #282f35;
             width: 40%;
-            height: 150vh;
+            height: 300vh;
             opacity: 0.95;
             z-index: 10;
             left: -70%;
@@ -234,8 +245,6 @@ body {
                         color: white;
                     }
                 }
-
-                
             }
         }
         
@@ -262,9 +271,13 @@ body {
 @media (max-width: 40rem) { // 40rem or smaller
 
     .header {
-        height: 35vh;
-        background-position: bottom 10%;
-        background-size: 180%;
+        height: 40vh;
+        background-position: bottom 55% left 50%;
+        background-size: cover;
+
+        &__scrollTopButton {
+            display: none;
+        }
 
         &__mobile-nav-elements {
             width: 70%;
@@ -273,9 +286,6 @@ body {
                 margin-top: 25%;
             }
         }
-
-        
-
         .nav {
             display: none;
         }
@@ -359,7 +369,7 @@ body {
 
 // ***************************************** vintageOliva
 
-.vintageOliva {    // to big padding provides white margin on mobile devices -- need to be fixed
+.vintageOliva {    
     display: flex;
     // align-items: center;
 
@@ -576,7 +586,7 @@ body {
 @media (max-width: 60rem) {
     .laBoriosa { 
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
@@ -588,7 +598,7 @@ body {
             display: flex;
             flex-direction: column-reverse;
             width: 100%;
-            padding: 0 2rem;
+            padding: 0;
 
             &-logo {
                 padding-top: 1.5rem;
@@ -596,7 +606,8 @@ body {
         }
         
         &__small-image-container {
-            display: none;
+            display: flex;
+            width: 100%;
         }
     }
 }
@@ -620,8 +631,9 @@ body {
         }
 
         &__small-image-container {
-            display: flex;
+            display: none;
             order: -1;
+            
         }
     }
 }
@@ -706,18 +718,9 @@ body {
         display: flex;
         flex-direction: column;
         width: 100%;
+        
         &__left-image-container {
-            width: 100%;
-    
-            &-left-image {
-                width: 100%
-            }
-        
-            &-center-logo {
-                position: absolute;
-                bottom: 35%;
-        
-            }
+            display: none;
         }
     
         &__description {     
@@ -753,6 +756,10 @@ body {
         display: flex;
         flex-direction: column;
         width: 100%;
+
+        &__left-image-container {
+            display: none;
+        }
     }
 }
 
@@ -1014,7 +1021,7 @@ body {
 
     &__image-4-container { // --------*********--------- IMAGE 4 --------*********---------
         width: 50%;
-        background-color: #fff;
+        background-color: #000000;
         position: relative;
 
         &:hover .bikesImages__image-4 {
@@ -1195,10 +1202,10 @@ body {
 }
 
 // ----------- bikeImages ----------------- @media
-@media (max-width: 80rem) {
+@media (max-width: 70rem) {
     .bikesImages {
         
-        &__image-1-container { // ********** @media 80rem IMAGE_1 ********** 
+        &__image-1-container { // ********** @media 70rem IMAGE_1 ********** 
             background-color: none;
     
             &:hover .bikesImages__image-1 {
@@ -1222,7 +1229,7 @@ body {
             }
         }
     
-        &__image-2-container { // ********** @media 80rem IMAGE_2 ********** 
+        &__image-2-container { // ********** @media 70rem IMAGE_2 ********** 
     
             &:hover .bikesImages__image-2 {
                 opacity: 1;
@@ -1233,15 +1240,16 @@ body {
             background-color: black;
         }
     
-        &__image-3-container-bottom-left { // ********** @media 80rem IMAGE_3 ********** 
+        &__image-3-container-bottom-left { // ********** @media 70rem IMAGE_3 ********** 
     
             &:hover .bikesImages__image-3 {
                 opacity: 1;
             }
         }
     
-        &__image-4-container { // ********** @media 80rem IMAGE_4 ********** 
-    
+        &__image-4-container { // ********** @media 70rem IMAGE_4 ********** 
+            display: flex;
+
             &:hover .bikesImages__image-4 {
                 opacity: 1;
             }
@@ -1255,8 +1263,9 @@ body {
             background-color: transparent;
         }
     
-        &__image-5-container { // ********** @media 80rem IMAGE_5 **********
-    
+        &__image-5-container { // ********** @media 70rem IMAGE_5 **********
+            display: flex;
+            
             &:hover .bikesImages__image-5 {
                 opacity: 1;
             }
@@ -1266,7 +1275,7 @@ body {
             }
         }
     
-        &__image-6-container {  // ********** @media 80rem IMAGE_6 **********
+        &__image-6-container {  // ********** @media 70rem IMAGE_6 **********
             
             &:hover .bikesImages__image-6 {
                 opacity: 1;
@@ -1277,7 +1286,7 @@ body {
             }
         }
     
-        &__image-7-container { // ********** @media 80rem IMAGE_7 **********
+        &__image-7-container { // ********** @media 70rem IMAGE_7 **********
             
             &:hover .bikesImages__image-7 {
                 opacity: 1;
@@ -1288,7 +1297,7 @@ body {
             }
         }
     
-        &__image-8-container { // ********** @media 80rem IMAGE_8 **********
+        &__image-8-container { // ********** @media 70rem IMAGE_8 **********
             &:hover .bikesImages__image-8 {
                 opacity: 1;
             }
@@ -1316,114 +1325,23 @@ body {
         }
        
         &__image-1-container { // ********** @media 60rem IMAGE_1 **********
-            background-color: transparent;
-    
-            &:hover .bikesImages__image-1 {
-                opacity: 1;
-            }
-    
-            &:hover {
-                background-color: transparent;
-            }
-        }
-    
-        &__image-1-hover { 
-            
-            &-icon {
-                width: 20%;
-            }
-
-            &-paragraph {
-                color: #ffffff;
-                font-size: 1.5rem;
-                text-shadow: 1px 1px 1px black;
-            }
+            display: none;
         }
     
         &__image-2-container { // ********** @media 60rem IMAGE_2 **********
-            display: block; 
-            overflow: hidden;
-    
-            &:hover .bikesImages__image-2 { // when hover an element .bikesImages__image-2 opacity = 1
-                opacity: 1;
-            }
-    
-            &:hover {
-                background-color: transparent;
-            }
-        }
-    
-        &__image-2 {
-            display: flex;
-            background-color: black;
-            width: 102.5%;
-            height: 100%;
-        }
-    
-        &__image-2-hover {
-            
-            &-icon {
-                width: 20%;
-            }
+            display: none;
         }
     
         &__image-3-container-bottom-left { // ********** @media 60rem IMAGE_3 **********
-    
-            &:hover .bikesImages__image-3 {
-                opacity: 1;
-            }
-    
-            &:hover {
-                background-color: transparent;
-            }
-        }
-
-        &__image-3-hover {
-            
-            &-icon {
-                width: 10%;
-            }
-        }
-    
-        &__container-middle {
-            display: flex;
-            width: 100%
+            display: none;
         }
     
         &__image-4-container { // ********** @media 60rem IMAGE_4 **********
-    
-            &:hover .bikesImages__image-4 {
-                opacity: 1;
-            }
-    
-            &:hover {
-                background-color: transparent;
-            }
-        }
-
-        &__image-4-hover {
-            
-            &-icon {
-                width: 20%;
-            }
+            display: none;
         }
     
         &__image-5-container { // ********** @media 60rem IMAGE_5 **********
-    
-            &:hover .bikesImages__image-5 {
-                opacity: 1;
-            }
-    
-            &:hover {
-                background-color: transparent;
-            }
-        }
-
-        &__image-5-hover {
-            
-            &-icon {
-                width: 20%;
-            }
+            display: none;
         }
     
         &__container-right {
@@ -1440,13 +1358,19 @@ body {
     
             &:hover {
                 background-color: transparent;
+
             }
         }
 
         &__image-6-hover {
-            
+            display: none;
+
             &-icon {
-                width: 10%;
+                display: none;
+            }
+
+            &-paragraph {
+                display: none;
             }
         }
     
@@ -1473,9 +1397,14 @@ body {
         }
 
         &__image-7-hover {
-            
+            display: none;
+
             &-icon {
-                width: 20%;
+                display: none;
+            }
+
+            &-paragraph {
+                display: none;
             }
         }
     
@@ -1498,9 +1427,14 @@ body {
         }
     
         &__image-8-hover {
-            
+            display: none;
+
             &-icon {
-                width: 20%;
+                display: none;
+            }
+
+            &-paragraph {
+                display: none;
             }
         }
     }
@@ -1522,110 +1456,23 @@ body {
         }
        
         &__image-1-container { // ********** @media 40rem IMAGE_1 **********
-            background-color: none;
-    
-            &:hover .bikesImages__image-1 {
-                opacity: 1;
-            }
-        }
-    
-        &__image-1-hover {  
-
-            &-paragraph {
-                color: #ffffff;
-                text-shadow: 1px 1px 1px black;
-                font-size: 1rem;
-            }
-
-            &-icon {
-                width: 30%;
-            }
+            display: none;
         }
     
         &__image-2-container { // ********** @media 40rem IMAGE_2 **********
-            display: block;
-            overflow: hidden;
-    
-            &:hover .bikesImages__image-2 { 
-                opacity: 1;
-            }
-    
-            &:hover {
-                background-color: transparent;
-            }
-        }
-    
-        &__image-2 {
-            display: flex;
-            background-color: black;
-            width: 102.5%;
-            height: 100%;
-        }
-    
-        &__image-2-hover {
-            display: flex;
-            justify-content: center;
-            align-items: center;    
-            flex-direction: column;
-            
-            &-icon {
-                width: 30%;
-            }
+            display: none;
         }
     
         &__image-3-container-bottom-left { // ********** @media 40rem IMAGE_3 **********
-    
-            &:hover .bikesImages__image-3 {
-                opacity: 1;
-            }
-    
-            &:hover {
-                background-color: transparent;
-            }
-        }
-    
-        &__image-3-hover { 
-
-            &-icon {
-                width: 15%;
-            }
+            display: none;
         }
     
         &__image-4-container { // ********** @media 40rem IMAGE_4 **********
-    
-            &:hover .bikesImages__image-4 {
-                opacity: 1;
-            }
-    
-            &:hover {
-                background-color: none;
-            }
-        }
-    
-        &__image-4-hover {  
-
-            &-icon {
-                width: 30%;
-            }
+            display: none;
         }
     
         &__image-5-container { // ********** @media 40rem IMAGE_5 **********
-    
-            &:hover .bikesImages__image-5 {
-                opacity: 1;
-            }
-    
-            &:hover {
-                background-color: transparent;
-            }
-        }
-    
-    
-        &__image-5-hover {  
-
-            &-icon {
-                width: 30%;
-            }
+            display: none;
         }
     
         &__image-6-container { // ********** @media 40rem IMAGE_6 **********
@@ -1640,10 +1487,7 @@ body {
         }
     
         &__image-6-hover {  
-
-            &-icon {
-                width: 15%;
-            }
+            display: none;
         }
     
         &__image-7-container { // ********** @media 40rem IMAGE_7 **********
@@ -1660,10 +1504,7 @@ body {
         }
     
         &__image-7-hover {  
-
-            &-icon {
-                width: 30%;
-            }
+            display: none;
         }
     
         &__image-8-container { // ********** @media 40rem IMAGE_8 **********
@@ -1680,10 +1521,7 @@ body {
         }
     
         &__image-8-hover {  
-
-            &-icon {
-                width: 30%;
-            }
+            display: none;
         }
     }
 }
@@ -1735,7 +1573,7 @@ body {
             
     
             &:hover {
-                background-color: transparent;
+                background-color: #499175;
                 cursor: default;
             }
         }
@@ -1809,21 +1647,34 @@ body {
 // ****************** @media ***************** SUBSCRIPTION
 
 @media (max-width: 40rem) {
-    .subscription {
+    
+    .subscription { // do porawki
+        justify-content: center;
+        padding-bottom: 1rem;
     
         &__form {
             justify-content: center;
-            padding-bottom: 3rem;
+            padding-bottom: 4rem;
+            flex-wrap: wrap;
     
             &-email {
-                padding-right: 0.5rem;
-                padding-bottom: 1rem;
+
+               &-input {
+                    box-shadow: 1px 1px 5px 0px #848789;
+                    -webkit-appearance: none;
+    
+                    &:focus {
+                        outline: none;
+                    }
+                }
     
                 &-button {
-                
+                    margin-top: 1rem;
+                    -webkit-appearance: none;
+    
                     &:hover {
-                        cursor: pointer;
-                        background-color: transparent;
+                        cursor: default;
+                        background-color:#64c29e;
                     }
                 }
             }
