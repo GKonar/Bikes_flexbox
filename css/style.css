@@ -895,7 +895,7 @@ body {
 
 .bikesImages__image-7-container {
   width: 50%;
-  height: 50%;
+  height: 100%;
   background-color: #fff;
   position: relative;
   display: flex;
@@ -918,7 +918,7 @@ body {
 
 .bikesImages__image-8-container {
   width: 50%;
-  height: 50%;
+  height: 100%;
   background-color: #fff;
   position: relative;
   display: flex;
