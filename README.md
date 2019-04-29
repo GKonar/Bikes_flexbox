@@ -7,4 +7,3 @@
 * Responsive design
 * BEM
 
-Unfortunetly there is only one scss file
